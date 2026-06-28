@@ -1,63 +1,32 @@
 import { useState } from "react";
-import { sendMessage } from "../services/api";
+import { askQuestion } from "../services/api";
 
 export default function useChat() {
   const [question, setQuestion] = useState("");
-  const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  async function launchAssistant() {
-    if (!question.trim()) return;
-
-    const userMessage = {
-      id: Date.now(),
-      sender: "user",
-      message: question,
-    };
-
-    setMessages((prev) => [...prev, userMessage]);
-
-    const currentQuestion = question;
-    setQuestion("");
+  async function sendQuestion(message) {
     setLoading(true);
 
     try {
-      const data = await sendMessage(currentQuestion);
+      const reply = await askQuestion(message);
 
-      const aiMessage = {
-        id: Date.now() + 1,
-        sender: "assistant",
-        message: data.reply,
-      };
+      setQuestion("");
 
-      setMessages((prev) => [...prev, aiMessage]);
-    } catch (err) {
-      console.error(err);
+      return reply;
+    } catch (error) {
+      console.error(error);
 
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: Date.now() + 1,
-          sender: "assistant",
-          message: "Unable to connect to backend.",
-        },
-      ]);
+      return "Unable to connect to backend.";
     } finally {
       setLoading(false);
     }
   }
 
-  function clearChat() {
-    setQuestion("");
-    setMessages([]);
-  }
-
   return {
     question,
     setQuestion,
-    messages,
     loading,
-    launchAssistant,
-    clearChat,
+    sendQuestion,
   };
 }

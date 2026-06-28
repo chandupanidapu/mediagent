@@ -1,60 +1,66 @@
-import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import ChatWindow from "./components/ChatWindow";
 import InputArea from "./components/InputArea";
-import MessageBubble from "./components/MessageBubble";
 
 import useChat from "./hooks/useChat";
+import useConversation from "./hooks/useConversation";
 
 import "./App.css";
-
-import { MessageSquare } from "lucide-react";
 
 function App() {
   const {
     question,
     setQuestion,
-    messages,
     loading,
-    launchAssistant,
-    clearChat,
+    sendQuestion,
   } = useChat();
+
+  const {
+    messages,
+    addUserMessage,
+    addAssistantMessage,
+    clearConversation,
+  } = useConversation();
+
+  async function handleSend() {
+    if (!question.trim()) return;
+
+    const currentQuestion = question;
+
+    addUserMessage(currentQuestion);
+
+    const reply = await sendQuestion(currentQuestion);
+
+    addAssistantMessage(reply);
+  }
 
   return (
     <div className="app">
-      <Sidebar clearChat={clearChat} />
+      <Sidebar clearChat={clearConversation} />
 
       <main className="main">
         <Header />
 
-        {messages.length === 0 ? (
-          <section className="chat-window">
-            <div className="placeholder">
-              <MessageSquare size={60} />
+        <section className="hero">
+          <h1>Clinical Intelligence Platform</h1>
 
-              <h2>Start a conversation</h2>
+          <p>
+            Evidence-Based Clinical Reasoning • Differential Diagnosis •
+            Clinical Decision Support • Medical Literature Analysis
+          </p>
+        </section>
 
-              <p>
-                Ask any medical or clinical research question to begin.
-              </p>
-            </div>
-          </section>
-        ) : (
-          <section className="response-area">
-            {messages.map((msg) => (
-              <MessageBubble
-                key={msg.id}
-                sender={msg.sender}
-                message={msg.message}
-              />
-            ))}
-          </section>
-        )}
+        <ChatWindow
+          messages={messages}
+          loading={loading}
+        />
 
         <InputArea
           question={question}
           setQuestion={setQuestion}
-          launchAssistant={launchAssistant}
           loading={loading}
+          onSend={handleSend}
         />
       </main>
     </div>

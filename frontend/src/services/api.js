@@ -1,6 +1,6 @@
 const API_URL = "http://127.0.0.1:8000/chat";
 
-export async function sendMessage(message) {
+export async function askQuestion(message) {
   const response = await fetch(API_URL, {
     method: "POST",
     headers: {
@@ -15,5 +15,7 @@ export async function sendMessage(message) {
     throw new Error("Backend request failed");
   }
 
-  return await response.json();
+  const data = await response.json();
+
+  return data.reply;
 }

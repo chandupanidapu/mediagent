@@ -10,7 +10,7 @@ function Sidebar({ clearChat }) {
 
       <button onClick={clearChat}>
         <Trash2 size={18} />
-        New Chat
+        New Clinical Session
       </button>
     </aside>
   );

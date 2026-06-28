@@ -3,14 +3,14 @@ import { Send, Loader2 } from "lucide-react";
 function InputArea({
   question,
   setQuestion,
-  launchAssistant,
+  onSend,
   loading,
 }) {
   return (
     <section className="input-area">
       <textarea
         rows={4}
-        placeholder="Ask a clinical or medical research question..."
+        placeholder="Describe a patient, symptoms, laboratory findings, imaging results, or a research question..."
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
       />
@@ -18,7 +18,7 @@ function InputArea({
       <div className="buttons">
         <button
           className="send-btn"
-          onClick={launchAssistant}
+          onClick={onSend}
           disabled={loading}
         >
           {loading ? (
@@ -27,12 +27,12 @@ function InputArea({
                 size={18}
                 className="spin"
               />
-              Thinking...
+              Analyzing...
             </>
           ) : (
             <>
               <Send size={18} />
-              Send
+              Analyze
             </>
           )}
         </button>
