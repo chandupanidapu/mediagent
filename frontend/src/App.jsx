@@ -1,12 +1,10 @@
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import ChatWindow from "./components/ChatWindow";
-import InputArea from "./components/InputArea";
+import Header from "./components/layout/Header";
+import Sidebar from "./components/layout/Sidebar";
+import MainContent from "./components/layout/MainContent";
+import InputArea from "./components/conversation/InputArea";
 
 import useChat from "./hooks/useChat";
 import useConversation from "./hooks/useConversation";
-
-import "./App.css";
 
 function App() {
   const {
@@ -33,6 +31,8 @@ function App() {
     const reply = await sendQuestion(currentQuestion);
 
     addAssistantMessage(reply);
+
+    setQuestion("");
   }
 
   return (
@@ -40,28 +40,23 @@ function App() {
       <Sidebar clearChat={clearConversation} />
 
       <main className="main">
+
         <Header />
 
-        <section className="hero">
-          <h1>Clinical Intelligence Platform</h1>
-
-          <p>
-            Evidence-Based Clinical Reasoning • Differential Diagnosis •
-            Clinical Decision Support • Medical Literature Analysis
-          </p>
-        </section>
-
-        <ChatWindow
+        <MainContent
           messages={messages}
           loading={loading}
         />
 
-        <InputArea
-          question={question}
-          setQuestion={setQuestion}
-          loading={loading}
-          onSend={handleSend}
-        />
+        {messages?.length > 0 && (
+          <InputArea
+            question={question}
+            setQuestion={setQuestion}
+            loading={loading}
+            onSend={handleSend}
+          />
+        )}
+
       </main>
     </div>
   );

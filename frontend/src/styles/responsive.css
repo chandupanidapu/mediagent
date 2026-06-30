@@ -1,0 +1,47 @@
+/* ==========================================================
+   MediAgent Responsive
+========================================================== */
+
+@media (max-width:1000px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .header,
+    .hero,
+    .chat-window,
+    .input-area{
+        padding:24px;
+    }
+
+    .header-right{
+        display:none;
+    }
+
+}
+
+@media (max-width:900px){
+
+    .header{
+        padding:20px;
+    }
+
+    .header-logo{
+        width:58px;
+        height:58px;
+    }
+
+    .header-brand-text h1{
+        font-size:24px;
+    }
+
+    .header-brand-text p{
+        font-size:13px;
+    }
+
+}

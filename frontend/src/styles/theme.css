@@ -1,0 +1,47 @@
+/* ==========================================================
+   MediAgent Theme v1.0
+========================================================== */
+
+:root{
+
+    /* ========= BRAND ========= */
+
+    --primary:#2563EB;
+    --primary-hover:#1D4ED8;
+    --primary-light:#DBEAFE;
+
+    --secondary:#0F172A;
+
+    --success:#16A34A;
+    --warning:#F59E0B;
+    --danger:#DC2626;
+
+    /* ========= LIGHT MODE ========= */
+
+    --bg:#F8FAFC;
+    --surface:#FFFFFF;
+    --surface-alt:#F1F5F9;
+
+    --border:#E2E8F0;
+
+    --text:#0F172A;
+    --text-secondary:#475569;
+    --text-muted:#64748B;
+
+    /* ========= SHADOW ========= */
+
+    --shadow-sm:0 2px 6px rgba(15,23,42,.05);
+    --shadow-md:0 10px 24px rgba(15,23,42,.08);
+    --shadow-lg:0 20px 45px rgba(15,23,42,.12);
+
+    /* ========= RADIUS ========= */
+
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:22px;
+    --radius-xl:30px;
+
+    /* ========= TRANSITIONS ========= */
+
+    --transition:.22s ease;
+}

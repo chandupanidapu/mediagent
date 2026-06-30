@@ -1,0 +1,40 @@
+/* ==========================================================
+   Typography
+========================================================== */
+
+h1{
+
+    font-size:38px;
+    font-weight:700;
+    line-height:1.15;
+    letter-spacing:-0.02em;
+}
+
+h2{
+
+    font-size:28px;
+    font-weight:700;
+}
+
+h3{
+
+    font-size:22px;
+    font-weight:600;
+}
+
+body{
+
+    font-size:16px;
+    line-height:1.65;
+}
+
+.small{
+
+    font-size:14px;
+}
+
+.caption{
+
+    font-size:13px;
+    color:var(--text-muted);
+}

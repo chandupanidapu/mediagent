@@ -1,0 +1,173 @@
+/* ==========================================================
+   MediAgent Sidebar
+========================================================== */
+
+.sidebar{
+    width:300px;
+    min-width:300px;
+    background:#111827;
+    border-right:1px solid #1E293B;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:28px 22px;
+}
+
+/* ---------- Brand ---------- */
+
+.sidebar h2{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin:0;
+
+    color:#F8FAFC;
+
+    font-size:34px;
+    font-weight:800;
+}
+
+.sidebar-version{
+    margin:12px 0 28px;
+
+    color:#94A3B8;
+
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* ---------- New Session ---------- */
+
+.sidebar > button{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px;
+
+    border:none;
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#3B82F6,#2563EB);
+
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    box-shadow:
+        0 10px 30px rgba(37,99,235,.28);
+
+    margin-bottom:34px;
+}
+
+.sidebar > button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(37,99,235,.38);
+}
+
+/* ---------- Navigation ---------- */
+
+.sidebar-nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    flex:1;
+}
+
+.nav-section{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.nav-title{
+
+    margin-bottom:16px;
+
+    color:#64748B;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.12em;
+}
+
+.nav-item{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 16px;
+
+    margin-bottom:8px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:transparent;
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.22s ease;
+
+    text-align:left;
+}
+
+.nav-item:hover{
+
+    background:#1E293B;
+
+    color:white;
+}
+
+.nav-item.active{
+
+    background:linear-gradient(135deg,#3B82F6,#2563EB);
+
+    color:white;
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,.25);
+}
+
+/* ---------- Bottom ---------- */
+
+.nav-bottom{
+
+    padding-top:26px;
+
+    border-top:1px solid #1E293B;
+}

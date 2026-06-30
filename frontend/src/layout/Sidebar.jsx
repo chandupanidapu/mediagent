@@ -1,91 +1,159 @@
 import {
-    MessageSquare,
-    Search,
-    Pill,
-    Settings,
-    Activity,
+  MessageSquare,
+  Search,
+  Pill,
+  Activity,
+  Settings,
+  Plus,
 } from "lucide-react";
 
-const menuItems = [
-    {
-        icon: MessageSquare,
-        label: "Clinical Chat",
-    },
-    {
-        icon: Search,
-        label: "Medical Research",
-    },
-    {
-        icon: Pill,
-        label: "Drug Comparison",
-    },
-    {
-        icon: Activity,
-        label: "Health Tools",
-    },
-    {
-        icon: Settings,
-        label: "Settings",
-    },
+import logo from "../assets/logo/logo-dark.svg";
+
+const workspaceItems = [
+  {
+    icon: MessageSquare,
+    label: "Clinical Chat",
+    active: true,
+  },
+  {
+    icon: Search,
+    label: "Medical Research",
+  },
+  {
+    icon: Pill,
+    label: "Drug Intelligence",
+  },
+  {
+    icon: Activity,
+    label: "Health Tools",
+  },
+];
+
+const settingsItems = [
+  {
+    icon: Settings,
+    label: "Settings",
+  },
 ];
 
 export default function Sidebar() {
-    return (
-        <aside
-            style={{
-                width: "270px",
-                background: "#111827",
-                color: "white",
-                display: "flex",
-                flexDirection: "column",
-                borderRight: "1px solid #1f2937",
-            }}
-        >
-            <div
-                style={{
-                    padding: "28px 24px",
-                    fontSize: "28px",
-                    fontWeight: "700",
-                    borderBottom: "1px solid #1f2937",
-                }}
-            >
-                🩺 MediAgent
-            </div>
+  return (
+    <aside className="sidebar">
 
-            <nav
-                style={{
-                    padding: "18px",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "10px",
-                }}
-            >
-                {menuItems.map((item) => {
-                    const Icon = item.icon;
+      {/* Brand */}
 
-                    return (
-                        <button
-                            key={item.label}
-                            style={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: "14px",
-                                padding: "14px 16px",
-                                borderRadius: "10px",
-                                border: "none",
-                                cursor: "pointer",
-                                background: "transparent",
-                                color: "#d1d5db",
-                                fontSize: "15px",
-                                transition: "0.2s",
-                            }}
-                        >
-                            <Icon size={20} />
-                            {item.label}
-                        </button>
-                    );
-                })}
-            </nav>
-        </aside>
-    );
+      <div className="sidebar-brand">
+
+        <img
+          src={logo}
+          alt="MediAgent"
+          className="sidebar-logo"
+        />
+
+        <div>
+
+          <h2>MediAgent</h2>
+
+          <p>Clinical Intelligence Platform</p>
+
+        </div>
+
+      </div>
+
+      {/* New Session */}
+
+      <button className="new-session-btn">
+
+        <Plus size={18} />
+
+        New Clinical Session
+
+      </button>
+
+      {/* Navigation */}
+
+      <div className="sidebar-nav">
+
+        <div>
+
+          <p className="nav-heading">
+
+            WORKSPACE
+
+          </p>
+
+          {workspaceItems.map((item) => {
+
+            const Icon = item.icon;
+
+            return (
+
+              <button
+                key={item.label}
+                className={`nav-item ${item.active ? "active" : ""}`}
+              >
+
+                <Icon size={19} />
+
+                {item.label}
+
+              </button>
+
+            );
+
+          })}
+
+        </div>
+
+        <div>
+
+          <p className="nav-heading">
+
+            SETTINGS
+
+          </p>
+
+          {settingsItems.map((item) => {
+
+            const Icon = item.icon;
+
+            return (
+
+              <button
+                key={item.label}
+                className="nav-item"
+              >
+
+                <Icon size={19} />
+
+                {item.label}
+
+              </button>
+
+            );
+
+          })}
+
+          <div className="sidebar-footer">
+
+            <span>
+
+              MediAgent v1.0.0
+
+            </span>
+
+            <small>
+
+              Evidence First
+
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+  );
 }
