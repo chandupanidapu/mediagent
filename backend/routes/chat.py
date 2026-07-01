@@ -13,7 +13,7 @@ router = APIRouter(
 @router.post("/", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     """
-    Main chat endpoint for MediAgent.
+    Main chat endpoint for Medarcy.
 
     Responsibilities:
     - Receive chat requests

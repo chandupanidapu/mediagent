@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Only the latest version of MediAgent receives security updates.
+Only the latest version of Medarcy receives security updates.
 
 ## Reporting a Vulnerability
 

@@ -1,8 +1,8 @@
-# 🔌 MediAgent REST API Documentation
+# 🔌 Medarcy REST API Documentation
 
 ## Overview
 
-MediAgent exposes a lightweight REST API that enables communication between the React frontend and the FastAPI backend.
+Medarcy exposes a lightweight REST API that enables communication between the React frontend and the FastAPI backend.
 
 The API is intentionally designed to remain provider-agnostic, allowing future integration with multiple AI models.
 

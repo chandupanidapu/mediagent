@@ -1,4 +1,4 @@
-# 🗺️ MediAgent Development Roadmap
+# 🗺️ Medarcy Development Roadmap
 
 ## Vision
 
@@ -103,4 +103,4 @@ Users will be able to switch providers without changing the application.
 
 # Long-Term Vision
 
-MediAgent aims to become a comprehensive AI-powered platform for clinicians, researchers, and healthcare professionals by combining modern web technologies with state-of-the-art large language models while maintaining a modular, scalable, and provider-independent architecture.
+Medarcy aims to become a comprehensive AI-powered platform for clinicians, researchers, and healthcare professionals by combining modern web technologies with state-of-the-art large language models while maintaining a modular, scalable, and provider-independent architecture.

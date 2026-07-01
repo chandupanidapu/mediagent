@@ -46,13 +46,13 @@ export default function Sidebar() {
 
         <img
           src={logo}
-          alt="MediAgent"
+          alt="Medarcy"
           className="sidebar-logo"
         />
 
         <div>
 
-          <h2>MediAgent</h2>
+          <h2>Medarcy</h2>
 
           <p>Clinical Intelligence Platform</p>
 
@@ -138,7 +138,7 @@ export default function Sidebar() {
 
             <span>
 
-              MediAgent v1.0.0
+              Medarcy v1.0.0
 
             </span>
 

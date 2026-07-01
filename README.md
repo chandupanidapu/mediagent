@@ -1,16 +1,16 @@
-# 🩺 MediAgent
+# 🩺 Medarcy
 
 ### AI-Powered Clinical Decision Support & Medical Research Platform
 
-MediAgent is an advanced AI-powered platform designed to assist healthcare professionals, medical students, researchers, and clinicians with evidence-based clinical reasoning, differential diagnosis, literature review, guideline interpretation, and medical knowledge retrieval.
+Medarcy is an advanced AI-powered platform designed to assist healthcare professionals, medical students, researchers, and clinicians with evidence-based clinical reasoning, differential diagnosis, literature review, guideline interpretation, and medical knowledge retrieval.
 
-Unlike conventional AI chatbots, MediAgent is engineered to function as an intelligent clinical reasoning assistant by combining modern Large Language Models with an extensible full-stack architecture.
+Unlike conventional AI chatbots, Medarcy is engineered to function as an intelligent clinical reasoning assistant by combining modern Large Language Models with an extensible full-stack architecture.
 
 ---
 
 ## Vision
 
-The long-term vision of MediAgent is to become a trustworthy AI assistant capable of supporting clinicians throughout the complete clinical workflow—from symptom analysis and differential diagnosis to evidence synthesis, treatment planning, and medical research.
+The long-term vision of Medarcy is to become a trustworthy AI assistant capable of supporting clinicians throughout the complete clinical workflow—from symptom analysis and differential diagnosis to evidence synthesis, treatment planning, and medical research.
 
 The platform is designed around four core principles:
 

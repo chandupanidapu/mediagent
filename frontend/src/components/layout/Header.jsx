@@ -9,13 +9,13 @@ export default function Header() {
       <div className="flex items-center gap-4">
         <img
           src={logo}
-          alt="MediAgent Logo"
+          alt="Medarcy Logo"
           className="h-11 w-11 object-contain"
         />
 
         <div>
           <h1 className="text-2xl font-extrabold tracking-tight text-white">
-            MediAgent
+            Medarcy
           </h1>
 
           <p className="text-sm text-slate-400">

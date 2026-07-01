@@ -26,7 +26,7 @@ export default function HomePage() {
                     lineHeight: "1.8",
                 }}
             >
-                Welcome to MediAgent.
+                Welcome to Medarcy.
                 <br />
                 An AI-powered clinical decision support and medical research
                 platform designed for healthcare professionals.

@@ -2,7 +2,7 @@ import logging
 import sys
 
 
-def setup_logger(name: str = "mediagent") -> logging.Logger:
+def setup_logger(name: str = "Medarcy") -> logging.Logger:
     logger = logging.getLogger(name)
 
     if logger.handlers:

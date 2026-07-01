@@ -1,8 +1,8 @@
-# 🏗️ MediAgent System Architecture
+# 🏗️ Medarcy System Architecture
 
 ## Overview
 
-MediAgent is an AI-powered Clinical Decision Support and Medical Research Platform built using a modern client-server architecture.
+Medarcy is an AI-powered Clinical Decision Support and Medical Research Platform built using a modern client-server architecture.
 
 The application separates the frontend presentation layer from backend AI orchestration to provide scalability, maintainability, and future extensibility.
 

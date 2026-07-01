@@ -5,7 +5,7 @@ from routes.chat import router as chat_router
 from routes.health import router as health_router
 
 app = FastAPI(
-    title="MediAgent API",
+    title="Medarcy API",
     version="1.0.0",
     description="Open-source AI Clinical & Medical Research Assistant",
 )
@@ -22,7 +22,7 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {
-        "application": "MediAgent",
+        "application": "Medarcy",
         "status": "running",
         "version": "1.0.0",
     }

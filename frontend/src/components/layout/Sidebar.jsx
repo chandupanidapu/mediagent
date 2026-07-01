@@ -22,13 +22,13 @@ function Sidebar({ clearChat }) {
 
           <img
             src={logo}
-            alt="MediAgent"
+            alt="Medarcy"
             className="sidebar-logo"
           />
 
           <div>
 
-            <h2>MediAgent</h2>
+            <h2>Medarcy</h2>
 
             <p>
               Clinical Intelligence

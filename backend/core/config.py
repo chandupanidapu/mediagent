@@ -3,7 +3,7 @@ from functools import lru_cache
 
 
 class Settings(BaseSettings):
-    APP_NAME: str = "MediAgent"
+    APP_NAME: str = "Medarcy"
     APP_VERSION: str = "1.0.0"
 
     GEMINI_API_KEY: str = ""
